@@ -5,7 +5,7 @@ ENV PORT=4000
 COPY . /app
 WORKDIR /app
 
-RUN npm cache clean && rm -f ~/.npm && npm install
+RUN npm cache clean --force && rm -f ~/.npm && npm install
 
 RUN adduser -D nonRootUser
 USER nonRootUser
