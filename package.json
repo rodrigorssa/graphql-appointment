@@ -1,10 +1,12 @@
 {
   "name": "jexperts-test",
+  "main":"src/index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
     "lint:init": "eslint --init",
     "lint": "eslint . --ext .ts --fix",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "test": "jest --runInBand --detectOpenHandles"
   },
   "dependencies": {
     "custom-env": "^2.0.1",
