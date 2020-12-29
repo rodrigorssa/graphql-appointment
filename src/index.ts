@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { GraphQLServer } from 'graphql-yoga';
 import mongoConnection from './database/mongo';
 import resolvers from './resolvers';

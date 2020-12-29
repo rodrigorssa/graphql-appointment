@@ -1,6 +1,6 @@
 {
   "name": "jexperts-test",
-  "main":"src/index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
     "lint:init": "eslint --init",
@@ -9,8 +9,8 @@
     "test": "jest --runInBand --detectOpenHandles --passWithNoTests"
   },
   "dependencies": {
-    "custom-env": "^2.0.1",
     "dayjs": "^1.9.7",
+    "dotenv": "^8.2.0",
     "graphql-yoga": "1.18.3",
     "mongoose": "^5.11.8",
     "ts-node": "7.0.1",
@@ -25,7 +25,7 @@
     "jest": "^26.6.3",
     "nodemon": "^2.0.6"
   },
-  "jest":{
+  "jest": {
     "testEnvironment": "node"
   }
 }
