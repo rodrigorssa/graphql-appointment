@@ -1,6 +1,6 @@
 import { connect } from 'mongoose';
 
-const mongoStrConnection = `${process.env.DB_TYPE}://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}${process.env.DB_CONFIG}`;
+const mongoStrConnection = `${process.env.DB_TYPE}://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME}${process.env.DB_CONFIG}`;
 
 export const mongoConnection = ():void => {
   connect(
