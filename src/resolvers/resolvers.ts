@@ -1,4 +1,4 @@
-import { appointmentModel, userModel } from './models';
+import { appointmentModel, userModel } from '../models';
 
 export default {
   Query: {

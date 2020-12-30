@@ -13,3 +13,9 @@ rules: {
   "import/extensions": "off",
   "import/no-unresolved": "off",
 }
+overrides: 
+  - files: 
+    - "**/*.test.ts"
+    - "test/expect/*.ts"
+    env:
+      jest: true
