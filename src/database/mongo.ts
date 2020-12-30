@@ -9,6 +9,7 @@ export const mongoConnection = ():void => {
       useCreateIndex: true,
       useUnifiedTopology: true,
       useNewUrlParser: true,
+      useFindAndModify: false,
     },
   ).then(() => {
     console.log('Mongo Connected!');

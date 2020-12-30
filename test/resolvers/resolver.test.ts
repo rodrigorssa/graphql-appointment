@@ -23,7 +23,7 @@ describe('RESOLVERS - QUERY', () => {
 
   describe('APPOINTMENTS', () => {
     test('it should return an array of appointments', async () => {
-      const query = await resolvers.Query.getAppointments();
+      const query = await resolvers.Query.getAppointments(null, {});
       expect(Array.isArray(query)).toBe(true);
       query.forEach((item) => {
         defaultAppointmentTest(item);

@@ -2,28 +2,29 @@ import { appointmentModel, userModel } from '../models';
 
 export default {
   Query: {
-    getAppointments(_, args) {
-      return appointmentModel.find(args);
+    getAppointments(_, { appointment }) {
+      return appointmentModel.find(appointment);
     },
     getUsers(_, args) {
       return userModel.find(args);
     },
   },
   Mutation: {
-    createAppointment(_, content) {
-      return appointmentModel.create(content.appointment);
+    createAppointment(_, { appointment }) {
+      return appointmentModel.create(appointment);
     },
-    createUser(_, content) {
-      return userModel.create(content.user);
+    createUser(_, { user }) {
+      return userModel.create(user);
     },
-    editAppointment(_, { id, content }) {
-      return appointmentModel.updateOne({
+    editAppointment(_, { id, appointment }) {
+      return appointmentModel.findByIdAndUpdate({
         _id: id,
       },
-      content);
+      appointment,
+      { new: true });
     },
     deleteAppointment(_, { id }) {
-      return appointmentModel.deleteOne({
+      return appointmentModel.findOneAndRemove({
         _id: id,
       });
     },

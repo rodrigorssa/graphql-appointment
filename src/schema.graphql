@@ -1,5 +1,5 @@
 type Query {
-  getAppointments(ID:String): [Appointment],
+  getAppointments(appointment: queryAppointment): [Appointment],
   getUsers(ID:String): [User]
 }
 
@@ -7,7 +7,7 @@ type Mutation {
   createUser(user:userInput): User,
   createAppointment(appointment:appointmentInput): Appointment,
   deleteAppointment(id: ID!): Appointment,
-  editAppointment(id: ID!): Appointment,
+  editAppointment(id: ID!, appointment:appointmentInput): Appointment,
 }
 
 type User {
@@ -36,4 +36,11 @@ input appointmentInput {
   beginTime: String!,
   endTime: String!,
   userId: String!
+}
+
+input queryAppointment {
+  date: String,
+  beginTime: String,
+  endTime: String,
+  userId: String
 }
